@@ -18,7 +18,7 @@ void Print_Current_Game_Status(struct Game_Info Current_Game)
             CYAN "                  Borders     Boxes\n"
         RED  "Player A:         %d           %d\n"
         BLUE "Player B:         %d           %d\n"
-        CYAN "Game Remaining :  %d           %d\n"
+        CYAN "Game Remaining:   %d           %d\n"
 	"---------------------------------------------\n"
 	RESET
         ,Current_Game.First_Player_Borders

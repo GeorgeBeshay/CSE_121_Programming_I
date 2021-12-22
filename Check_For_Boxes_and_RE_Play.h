@@ -1,13 +1,13 @@
 /*
 Module Description:
-Function Taking 5 Arguments (x,y,Beignner_Board[x][y],Player who has played,Temp array of status containing whether
+Function Taking 6 Arguments (x,y,Beignner_Board[x][y],Player who has played,Temp array of status,Beginner_Board_Colour[x][y]) containing whether
 the player had created a box or not, if yes RE_Play will occur.
 */
 
 #ifndef CHECK_FOR_BOXES_AND_RE_PLAY_H
 #define CHECK_FOR_BOXES_AND_RE_PLAY_H
 
-void Check_For_Boxes_and_RE_Play(int x,int y,int Beginner_Board[][y],char player,int temp[2])
+void Check_For_Boxes_and_RE_Play(int x,int y,int Beginner_Board[][y],char player,int temp[2],int Beginner_Board_Colour[x][y])
 {
     int RE_Play=0;
     int Boxes_Created=0;
@@ -27,8 +27,16 @@ void Check_For_Boxes_and_RE_Play(int x,int y,int Beginner_Board[][y],char player
                     if(counter == 4) // if 4 borders are counted
                     {
                         Beginner_Board[j][k]=player; // Then place the letter of the player in the center of the box
-                        temp[0]=1; // Box created, then RE_Play
-                        temp[1]++; // Box created, add it
+			if (player=='A')
+			{
+				Beginner_Board_Colour[j][k]=1;
+			}
+			else
+			{
+				Beginner_Board_Colour[j][k]=-1;
+			}
+                        temp[1]=1; // Box created, then RE_Play
+                        temp[0]++; // Box created, add it
                     }
                 }
             }

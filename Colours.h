@@ -9,11 +9,11 @@ Defining Colours ASCII Codes
 #include <stdio.h>
 // foreground color 
 #define RED     "\x1b[31m"
-#define GREEN   "\x1b[32m"
+#define GREEN   "\x1b[36m" // THIS IS NOT GREEN, IT IS CYAN BUT SWITCHED WITH CYAN
 #define YELLOW  "\x1b[33m"
 #define BLUE    "\x1b[34m"
 #define MAGENTA "\x1b[35m"
-#define CYAN    "\x1b[36m"
+#define CYAN    "\x1b[32m" // THIS IS NOT CYAN, IT IS GREEN BUT SWITCHED WITH GREEN 
 #define RESET   "\x1b[0m"
 #define WHITE   "\x1b[37m"
 
