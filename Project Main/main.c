@@ -21,18 +21,22 @@ int main()
     "Please Choose The Choice Number of The difficulty level You want to Play.\n" RESET);
     printf(CYAN "-------------------------------------------------------------------------\n" RESET);
     printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
-    char d;
-    scanf(" %c",&d);
-    d = (int)d - 48; // Converting the ASCII Code to the decimal real value, notice that '0' in decimal = 48 ASCII Characters and so on.
-    while(d != 1 && d != 2)
+    char d[2];
+    scanf(" %s",&d);
+    d[0] = (int)d[0] - 48; // Converting the ASCII Code to the decimal real value, notice that '0' in decimal = 48 ASCII Characters and so on.
+    while(d[0] != 1 && d[0] != 2 || (int) d[1] >= 33 && (int) d[1] <= 127) // Checking that the user has entered only 1 Digit / Character.
+    // To avoid the error that happens when the user enter 12 for example, the compiler will read 1 and choose 1
+    // This should not happen, we should read 12 as 1 number, but since we are reading characters so we read only 1 digit.
+    // So we must check that the second character is empty ! in other words there is no a printable character placed in it 
+    // printable characters are from 33 - 127
     {
         printf(CYAN "Error, Please Choose one of the 2 options only.\n" RESET);
         printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
-        scanf(" %c",&d); // Notice That the Space Before the %c is very important, if not placed, loop will run twice.
+        scanf(" %s",&d); // Notice That the Space Before the %s is very important, if not placed, loop will run twice.
         // As the compiler will assume the 'space' in the line before the scanf as the character to store in d.
-        d = (int)d - 48;
+        d[0] = (int)d[0] - 48;
     }
-    if(d==1)
+    if(d[0]==1)
     {
         int Beginner_Board[6][6]={{}}; // Initializing 6x6 Array
         Initialize_PvP_Beginner_Board(6,6,Beginner_Board);
@@ -187,7 +191,7 @@ int main()
         Print_Who_Won(Current_Game);
     // --------------------------------- PvP_Beginner_Mode_End ------------------------------------------
     } 
-    else if(d==2)
+    else if(d[0]==2)
     {
         int Advanced_Board[12][12]={{}}; // Initializing 6x6 Array
         A_Initialize_PvP_Advamced_Board(12,12,Advanced_Board);
