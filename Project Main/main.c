@@ -21,12 +21,16 @@ int main()
     "Please Choose The Choice Number of The difficulty level You want to Play.\n" RESET);
     printf(CYAN "-------------------------------------------------------------------------\n" RESET);
     printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
-    int d ;
-    scanf("%d",&d);
+    char d;
+    scanf(" %c",&d);
+    d = (int)d - 48; // Converting the ASCII Code to the decimal real value, notice that '0' in decimal = 48 ASCII Characters and so on.
     while(d != 1 && d != 2)
     {
+        printf(CYAN "Error, Please Choose one of the 2 options only.\n" RESET);
         printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
-        scanf("%d",&d);
+        scanf(" %c",&d); // Notice That the Space Before the %c is very important, if not placed, loop will run twice.
+        // As the compiler will assume the 'space' in the line before the scanf as the character to store in d.
+        d = (int)d - 48;
     }
     if(d==1)
     {
