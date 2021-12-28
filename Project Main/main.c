@@ -23,6 +23,11 @@ int main()
     printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
     int d ;
     scanf("%d",&d);
+    while(d != 1 && d != 2)
+    {
+        printf(CYAN "For Beginner Mode Press 1 \nFor Advanced Mode Press 2\nEnter: " RESET);
+        scanf("%d",&d);
+    }
     if(d==1)
     {
         int Beginner_Board[6][6]={{}}; // Initializing 6x6 Array
