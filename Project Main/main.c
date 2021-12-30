@@ -54,7 +54,28 @@ int main()
             while(Player_1.Turn==1 && Borders > 0) // Player 1 Turn is True
             {
                 int temp[2]={0,0}; // 1st -> Boxes Created, 2nd -> Turn
-                printf(RED "Player A's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);scanf("%d %d",&x,&y); // Scanning the index
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ [AVOIDING CHARACTERS ERROR - CODE]
+                char g[2];
+                char f[2];
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+                printf(RED "Player A's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);scanf(" %s %s",&g,&f); // Scanning the index
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+                g[0] = (int)g[0] - 48; 
+                f[0] = (int)f[0] - 48; 
+                while(g[0] > 9 || g[0] < 0 || (int) g[1] >= 33 && (int) g[1] <= 127 || f[0] > 9 || f[0] <0 || (int) f[1] >= 33 && (int) f[1] <= 127)
+                {
+                    printf(CYAN "Error, Non-Available input was given, Please check that the input is with in the Board limits X[0-5] Y[0-5]\n");
+                    printf(RED "Player A's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);
+                    scanf(" %s %s",&g,&f);
+                    // Scanning the index
+                    // Notice That the Space Before the %s is very important, if not placed, loop will run twice.
+                    // As the compiler will assume the 'space' in the line before the scanf as the character to store in d.
+                    g[0] = (int)g[0] - 48;
+                    f[0] = (int)f[0] - 48;
+                }
+                x = g[0];
+                y = f[0];
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 if(x>0 && y>0 && x<6 && y<6) 
                 {
                     if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
@@ -124,7 +145,28 @@ int main()
             while(Player_2.Turn==1 && Borders > 0) // Player 1 Turn is True
             {
                 int temp[2]={0,0}; // 1st -> Turn , 2nd -> Boxes
-                printf(BLUE "Player B's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);scanf("%d %d",&x,&y); // Scanning the index
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ [AVOIDING CHARACTERS ERROR - CODE]
+                char g[2];
+                char f[2];
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                printf(BLUE "Player B's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);scanf(" %s %s",&g,&f); // Scanning the index
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                g[0] = (int)g[0] - 48; 
+                f[0] = (int)f[0] - 48; 
+                while(g[0] > 9 || g[0] < 0 || (int) g[1] >= 33 && (int) g[1] <= 127 || f[0] > 9 || f[0] <0 || (int) f[1] >= 33 && (int) f[1] <= 127)
+                {
+                    printf(CYAN "Error, Non-Available input was given, Please check that the input is with in the Board limits X[0-5] Y[0-5]\n");
+                    printf(BLUE "Player B's Turn\nEnter The Index in the form X(Row) Y(Column): " RESET);
+                    scanf(" %s %s",&g,&f);
+                    // Scanning the index
+                    // Notice That the Space Before the %s is very important, if not placed, loop will run twice.
+                    // As the compiler will assume the 'space' in the line before the scanf as the character to store in d.
+                    g[0] = (int)g[0] - 48;
+                    f[0] = (int)f[0] - 48;
+                }
+                x = g[0];
+                y = f[0];
+                // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 if(x>0 && y>0 && x<6 && y<6) 
                 {
                     if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
