@@ -29,6 +29,7 @@ int main()
     system("cls");
     time_t start,end;
     printf(CYAN "\t\t\t\t\t""******************* ""Welcome to \"Dots & Boxes Game\" PvP Mode *******************\n\n");
+    printf("Created By:\n- Mariam Aziz\n- George Samy\n\n");
     printf(CYAN "Please Type the Number corresponding to your choice from the following list:\n"
     "1] PvP Mode.\n"
     "2] PvC Mode.\n"
