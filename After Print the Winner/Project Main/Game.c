@@ -62,7 +62,7 @@ int main()
         while(d[0] != 1 && d[0] != 2 || (int) d[1] >= 33 && (int) d[1] <= 127) // Checking that the user has entered only 1 Digit / Character.
         // To avoid the error that happens when the user enter 12 for example, the compiler will read 1 and choose 1
         // This should not happen, we should read 12 as 1 number, but since we are reading characters so we read only 1 digit.
-        // So we must check that the second character is empty ! in other words there is no a printable character placed in it 
+        // So we must check that the second character is empty ! in other words there is no a printable character placed in it
         // printable characters are from 33 - 127
         {
             printf(CYAN "Error, Please Choose one of the 2 options only.\n" RESET);
@@ -92,7 +92,7 @@ int main()
             Intialize_PvP_Beginner_Board_Colour(6,6,Beginner_Board_Colour);
             Copy_2D_To_3D(6,6,13,Board_Number,Beginner_Board,Beginner_Board_3D);
             Copy_2D_To_3D(6,6,13,Board_Number,Beginner_Board_Colour,Beginner_Board_Colour_3D);
-            int x,y; // Row , Column variables. Users will enter the position to place the border in them. 
+            int x,y; // Row , Column variables. Users will enter the position to place the border in them.
             int Borders = 12; // Game Should End after all available borders are placed.
             printf("\t\t\t\t\t""\x1b[32m""Welcome to \"Dots & Boxes Game\" Beginner Mode\n""\x1b[0m"); // Welcome Statement in green
             if(yy[0]==2)
@@ -153,7 +153,7 @@ int main()
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ [AVOIDING CHARACTERS ERROR - CODE]
                     char g[2];
                     char f[2];
-                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     printf(RED "Player A's Turn\n");
                     if(Current_Game.Remaining_Borders<12)
                     {
@@ -161,9 +161,9 @@ int main()
                     }
                     printf("Enter The Index in the form X(Row) Y(Column): " RESET);start = time(NULL);scanf(" %s %s",&g,&f); // Scanning the index
                     end = time(NULL);
-                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
-                    g[0] = (int)g[0] - 48; 
-                    f[0] = (int)f[0] - 48; 
+                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                    g[0] = (int)g[0] - 48;
+                    f[0] = (int)f[0] - 48;
                     while(g[0] > 9 && (g[0]!=37 && g[0]!=34 && g[0]!=21) || g[0] < 0 || (int) g[1] >= 33 && (int) g[1] <= 127 || f[0] > 9 && (f[0]!=37 && f[0]!=34 && f[0]!=21) || f[0] <0 || (int) f[1] >= 33 && (int) f[1] <= 127)
                     {
                         printf(CYAN "Error, Non-Available input was given, Please check that the input is with in the Board limits X[0-5] Y[0-5]\n");
@@ -185,16 +185,16 @@ int main()
                     x = g[0];
                     y = f[0];
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    if(x>0 && y>0 && x<6 && y<6) 
+                    if(x>0 && y>0 && x<6 && y<6)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical Borders' Position.
                             {
                                 if(Beginner_Board[x][y]==' ') // Checking the position is empty
                                 {
                                     Available_REDOs=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     Borders--;Current_Game.Remaining_Borders--; // Subtracting One From the Remaining Borders
                                     Beginner_Board[x][y]=186;
                                     Beginner_Board_Colour[x][y]=1;
@@ -382,7 +382,7 @@ int main()
                             Export_Data_Beginner(Beginner_Board,Beginner_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
@@ -405,8 +405,8 @@ int main()
                     printf("Enter The Index in the form X(Row) Y(Column): " RESET);start = time(NULL);scanf(" %s %s",&g,&f); // Scanning the index
                     end = time(NULL);
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    g[0] = (int)g[0] - 48; 
-                    f[0] = (int)f[0] - 48; 
+                    g[0] = (int)g[0] - 48;
+                    f[0] = (int)f[0] - 48;
                     while(g[0] > 9 && (g[0]!=37 && g[0]!=34 && g[0]!=21) || g[0] < 0 || (int) g[1] >= 33 && (int) g[1] <= 127 || f[0] > 9 && (f[0]!=37 && f[0]!=34 && f[0]!=21) || f[0] <0 || (int) f[1] >= 33 && (int) f[1] <= 127)
                     {
                         printf(CYAN "Error, Non-Available input was given, Please check that the input is with in the Board limits X[0-5] Y[0-5]\n");
@@ -425,16 +425,16 @@ int main()
                     x = g[0];
                     y = f[0];
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    if(x>0 && y>0 && x<6 && y<6) 
+                    if(x>0 && y>0 && x<6 && y<6)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical Borders' Position.
                             {
                                 if(Beginner_Board[x][y]==' ') // Checking the position is empty
                                 {
                                     Available_REDOs=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     Borders--;Current_Game.Remaining_Borders--; // Subtracting One From the Remaining Borders
                                     Beginner_Board[x][y]=186;
                                     Beginner_Board_Colour[x][y]=-1;
@@ -622,12 +622,12 @@ int main()
                             Export_Data_Beginner(Beginner_Board,Beginner_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
                     }
-                    else 
+                    else
                     {
                         printf(CYAN "Position is out of range, Please Try again.\n" RESET);
                     }
@@ -640,7 +640,7 @@ int main()
             Export_Beginner_Top_10_List();
             printf(CYAN"Score Has Been updated for the 2 players !!\nCheck it from the $ Main Menu > Top 10 List $ \n"RESET);
         // --------------------------------- PvP_Beginner_Mode_End ------------------------------------------
-        } 
+        }
         else if(d[0]==2)
         {
             char yy[2];
@@ -662,7 +662,7 @@ int main()
             Intialize_PvP_Advanced_Board_Colour(12,12,Advanced_Board_Colour);
             A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board,Advanced_Board_3D);
             A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board_Colour,Advanced_Board_Colour_3D);
-            int x,y; // Row , Column variables. Users will enter the position to place the border in them. 
+            int x,y; // Row , Column variables. Users will enter the position to place the border in them.
             int A_Borders = 60; // Game Should End after all available A_Borders are placed.
             printf("\t\t\t\t\t""\x1b[32m""Welcome to \"Dots & Boxes Game\" Advanced Mode\n""\x1b[0m"); // Welcome Statement in green
             if(yy[0]==2)
@@ -725,17 +725,37 @@ int main()
                     {
                         printf("For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n");
                     }
-                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);scanf("%d %d",&x,&y);end=time(NULL); // Scanning the index
-                    if(x>0 && y>0 && x<12 && y<12) 
+                    char PA1[3]; char PA2[3]; 
+                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);
+                    scanf("%s %s",&PA1,&PA2);
+                    end = time(NULL);
+                    if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                    if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                    if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                    if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    while (strlen(PA1)==3 || strlen(PA2)==3)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        printf(CYAN "Error, Please Enter a valid input.\n"
+                        "For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n"
+                        "Enter The Index in the form X(Row) Y(Column): " RESET);
+                        start=time(NULL);
+                        scanf("%s %s",&PA1,&PA2);
+                        end=time(NULL);
+                        if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                        if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                        if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                        if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    }
+                    if(x>0 && y>0 && x<12 && y<12)
+                    {
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical A_Borders' Position.
                             {
                                 if(Advanced_Board[x][y]==' ') // Checking the position is empty
                                 {
                                     A_Available_REDOs=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     A_Borders--;A_Current_Game.A_Remaining_Borders--; // Subtracting One From the Remaining A_Borders
                                     Advanced_Board[x][y]=186;
                                     Advanced_Board_Colour[x][y]=1;
@@ -927,14 +947,14 @@ int main()
                             Export_Data_Advanced(Advanced_Board,Advanced_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
                     }
                     else
                     {
-                        printf(CYAN "Position is out of range, Please Try again.\n" RESET);
+                        printf(CYAN "Input is not Valid, Please Try again.\n" RESET);
                     }
                 }
         // --------------------------------- Player_B's_Turn ------------------------------------------
@@ -943,17 +963,37 @@ int main()
                     int temp[2]={0,0}; // 1st -> Turn , 2nd -> Boxes
                     printf(BLUE "Player B's Turn\n");
                     printf("For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n");
-                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);scanf("%d %d",&x,&y);end=time(NULL); // Scanning the index
-                    if(x>0 && y>0 && x<12 && y<12) 
+                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);
+                    char PA1[3]; char PA2[3]; 
+                    scanf("%s %s",&PA1,&PA2);
+                    end=time(NULL); // Scanning the index
+                    if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                    if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                    if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                    if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    while (strlen(PA1)==3 || strlen(PA2)==3)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        printf(CYAN "Error, Please Enter a valid input.\n"
+                        "For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n"
+                        "Enter The Index in the form X(Row) Y(Column): " RESET);
+                        start=time(NULL);
+                        scanf("%s %s",&PA1,&PA2);
+                        end=time(NULL);
+                        if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                        if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                        if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                        if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    }
+                    if(x>0 && y>0 && x<12 && y<12)
+                    {
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical A_Borders' Position.
                             {
                                 if(Advanced_Board[x][y]==' ') // Checking the position is empty
                                 {
                                     A_Available_REDOs=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     A_Borders--;A_Current_Game.A_Remaining_Borders--; // Subtracting One From the Remaining A_Borders
                                     Advanced_Board[x][y]=186;
                                     Advanced_Board_Colour[x][y]=-1;
@@ -1145,12 +1185,12 @@ int main()
                             Export_Data_Advanced(Advanced_Board,Advanced_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
                     }
-                    else 
+                    else
                     {
                         printf(CYAN "Position is out of range, Please Try again.\n" RESET);
                     }
@@ -1207,7 +1247,7 @@ int main()
             Intialize_PvP_Beginner_Board_Colour(6,6,Beginner_Board_Colour);
             Copy_2D_To_3D(6,6,13,Board_Number,Beginner_Board,Beginner_Board_3D);
             Copy_2D_To_3D(6,6,13,Board_Number,Beginner_Board_Colour,Beginner_Board_Colour_3D);
-            int x,y; // Row , Column variables. Users will enter the position to place the border in them. 
+            int x,y; // Row , Column variables. Users will enter the position to place the border in them.
             int Borders = 12; // Game Should End after all available borders are placed.
             printf("\t\t\t\t\t""\x1b[32m""Welcome to \"Dots & Boxes Game\" Beginner Mode\n""\x1b[0m"); // Welcome Statement in green
             if(yy[0]==2)
@@ -1267,16 +1307,16 @@ int main()
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ [AVOIDING CHARACTERS ERROR - CODE]
                     char g[2];
                     char f[2];
-                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     printf(RED "Player A's Turn\n");
                     if(Current_Game.Remaining_Borders<12)
                     {
                         printf("For UNDO Type \"U U\"\nFor REDO Type \"R R\"\nTo Exit the Game Type \"E E\"\n");
                     }
                     printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);scanf(" %s %s",&g,&f);end=time(NULL); // Scanning the index
-                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
-                    g[0] = (int)g[0] - 48; 
-                    f[0] = (int)f[0] - 48; 
+                    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                    g[0] = (int)g[0] - 48;
+                    f[0] = (int)f[0] - 48;
                     while(g[0] > 9 && (g[0]!=37 && g[0]!=34 && g[0]!=21) || g[0] < 0 || (int) g[1] >= 33 && (int) g[1] <= 127 || f[0] > 9 && (f[0]!=37 && f[0]!=34 && f[0]!=21) || f[0] <0 || (int) f[1] >= 33 && (int) f[1] <= 127)
                     {
                         printf(CYAN "Error, Non-Available input was given, Please check that the input is with in the Board limits X[0-5] Y[0-5]\n");
@@ -1296,9 +1336,9 @@ int main()
                     x = g[0];
                     y = f[0];
                     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    if(x>0 && y>0 && x<6 && y<6) 
+                    if(x>0 && y>0 && x<6 && y<6)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical Borders' Position.
                             {
@@ -1306,7 +1346,7 @@ int main()
                                 {
                                     Available_REDOs=0;
                                     U_C_I=0;R_C_I=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     Borders--;Current_Game.Remaining_Borders--; // Subtracting One From the Remaining Borders
                                     Beginner_Board[x][y]=186;
                                     Beginner_Board_Colour[x][y]=1;
@@ -1493,12 +1533,12 @@ int main()
                             Export_Data_Beginner(Beginner_Board,Beginner_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
                     }
-                    else 
+                    else
                     {
                         printf(CYAN "Position is out of range, Please Try again.\n" RESET);
                     }
@@ -1694,7 +1734,7 @@ int main()
             Intialize_PvP_Advanced_Board_Colour(12,12,Advanced_Board_Colour);
             A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board,Advanced_Board_3D);
             A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board_Colour,Advanced_Board_Colour_3D);
-            int x,y; // Row , Column variables. Users will enter the position to place the border in them. 
+            int x,y; // Row , Column variables. Users will enter the position to place the border in them.
             int A_Borders = 60; // Game Should End after all available A_Borders are placed.
             printf("\t\t\t\t\t""\x1b[32m""Welcome to \"Dots & Boxes Game\" Advanced Mode\n""\x1b[0m"); // Welcome Statement in green
             if(yy[0]==2)
@@ -1756,11 +1796,30 @@ int main()
                     {
                         printf("For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n");
                     }
-                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);scanf("%d %d",&x,&y);// Scanning the index
-                    end=time(NULL); 
-                    if(x>0 && y>0 && x<12 && y<12) 
+                    char PA1[3]; char PA2[3]; 
+                    printf("Enter The Index in the form X(Row) Y(Column): " RESET);start=time(NULL);
+                    scanf("%s %s",&PA1,&PA2); // Scanning the index
+                    end=time(NULL);
+                    if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                    if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                    if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                    if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    while (strlen(PA1)==3 || strlen(PA2)==3)
                     {
-                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not 
+                        printf(CYAN "Error, Please Enter a valid input.\n"
+                        "For UNDO Type \"20 20\"\nFor REDO Type \"30 30\"\nTo Exit the Game Type \"50 50\"\n"
+                        "Enter The Index in the form X(Row) Y(Column): " RESET);
+                        start=time(NULL);
+                        scanf("%s %s",&PA1,&PA2);
+                        end=time(NULL);
+                        if (strlen(PA1)==1){x=(int)PA1[0]-48;};
+                        if (strlen(PA1)==2){x=((int)PA1[0]-48)*10+((int)PA1[1]-48);};
+                        if (strlen(PA2)==1){y=(int)PA2[0]-48;};
+                        if (strlen(PA2)==2){y=((int)PA2[0]-48)*10+((int)PA2[1]-48);};
+                    }
+                    if(x>0 && y>0 && x<12 && y<12)
+                    {
+                        if(x%2==0) // Checking Whether the chosen Position can be placed in it a border or not
                         {
                             if(y%2==1) // Checking the Vertical A_Borders' Position.
                             {
@@ -1768,7 +1827,7 @@ int main()
                                 {
                                     A_Available_REDOs=0;
                                     A_U_C_I=0;A_R_C_I=0;
-                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET); 
+                                    printf(CYAN "Position Available \"Vertical Dash\"\n" RESET);
                                     A_Borders--;A_Current_Game.A_Remaining_Borders--; // Subtracting One From the Remaining A_Borders
                                     Advanced_Board[x][y]=186;
                                     Advanced_Board_Colour[x][y]=1;
@@ -1961,7 +2020,7 @@ int main()
                             Export_Data_Advanced(Advanced_Board,Advanced_Board_Colour,ww[0],temptemp);
                             printf(CYAN "DATA SAVED\n" RESET );exit(0);
                         }
-                        else 
+                        else
                         {
                             printf(CYAN"Data not saved.\n"RESET);exit(0);
                         }
