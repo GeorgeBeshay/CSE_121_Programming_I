@@ -1728,8 +1728,8 @@ int main()
                 A_Player_2.Borders=temptemp[6];
                 A_Player_2.Boxes=temptemp[7];
                 A_Board_Number=temptemp[8];
-                A_Copy_2D_To_3D(6,6,13,Board_Number,Advanced_Board,Advanced_Board_3D);
-                A_Copy_2D_To_3D(6,6,13,Board_Number,Advanced_Board_Colour,Advanced_Board_Colour_3D);
+                A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board,Advanced_Board_3D);
+                A_Copy_2D_To_3D(12,12,61,A_Board_Number,Advanced_Board_Colour,Advanced_Board_Colour_3D);
                 URA_GS_PI_Current.URA_A_FP_Borders[A_Board_Number]=temptemp[4];
                 URA_GS_PI_Current.URA_A_FP_Boxes[A_Board_Number]=temptemp[5];
                 URA_GS_PI_Current.URA_A_P1_Turn[A_Board_Number]=temptemp[2];
